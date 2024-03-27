@@ -52,13 +52,14 @@ void * lastList(List * list) {
     if (list == NULL || list->tail == NULL)
       return NULL;
     list -> current = list -> tail;
-   // while (list->current->next != NULL)
-     // list -> current = list -> current -> next;
     return list -> tail -> data;
 }
 
 void * prevList(List * list) {
-    return NULL;
+    if (list == NULL || list->current == NULL || list->current->prev == NULL)
+      return NULL;
+    list -> current = list -> current -> prev;
+    return list -> prev -> data;
 }
 
 void pushFront(List * list, void * data) {

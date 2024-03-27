@@ -66,3 +66,17 @@ Wed 27 Mar 2024 09:08:29 PM UTC:
  tests:  6|4
 total_score: 25/70
 25aae8a
+Wed 27 Mar 2024 09:12:20 PM UTC: 
+ list.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘prevList’:
+list.c:62:17: error: ‘List’ {aka ‘struct List’} has no member named ‘prev’
+   62 |     return list -> prev -> data;
+      |                 ^~
+list.c:63:1: error: control reaches end of non-void function [-Werror=return-type]
+   63 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+d3b9a58
